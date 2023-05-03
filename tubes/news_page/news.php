@@ -33,7 +33,7 @@
                     <li><a href="#berita-trending" class="nav-content">Trending</a></li>
                     <li><a href="#berita-video" class="nav-content">Video</a></li>
                     <li><a href="#tentang" class="nav-content">Tentang</a></li>
-                    <li><a href="login_register.php" class="nav-btnlogin"><button class="btn-login">Login</button></a></li>
+                    <li><a href=".././login_register/login.php" class="nav-btnlogin"><button class="btn-login">Login</button></a></li>
                 </ul>
             </div>
             
