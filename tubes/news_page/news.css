@@ -1,0 +1,593 @@
+/*========== Link Fonts ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;1,300&family=Josefin+Sans&family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,600&family=Poppins:wght@200;300;400&display=swap');
+
+/*========== HTML ==========*/
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: white;
+    background-attachment: fixed;
+}
+
+/*========== Navigation Bar ==========*/
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+    background: #fcdb12;
+    opacity: 1;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+nav.sticky {
+    background-color: #0f0f0f;
+}
+
+nav img{
+    height: 30px;
+}
+
+.searchbox{
+    background-color: rgba(255, 255, 255, 0.445);
+    border-radius: 10px;
+    padding: 6px 0;
+    margin: 0 20px;
+}
+
+.searchbox input{
+    background: none;
+    border: 2px;
+    outline: none;
+    text-align: center;
+    color: black;
+}
+
+::-webkit-input-placeholder {
+    color: black;
+}
+
+nav button {
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.searchbox button{
+    background-color: transparent;
+    outline: none;
+    border-radius: 5px;
+    width: 50px;
+    height: 20px;
+    border: 2px solid transparent;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-evenly;
+    transition: 0.5s;
+}
+
+nav ul li .nav-content{
+    color: #0f0f0f;
+    text-decoration: none;
+    position: relative;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+
+nav ul li .nav-content:after{
+    content: "";
+    position: absolute;
+    background-color: #0f0f0f;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+nav.sticky ul li .nav-content:after{
+    background-color: white;
+}
+
+nav ul li .nav-content:hover:after{
+    width: 100%;
+}
+
+nav.sticky ul li .nav-content{
+    color: white;
+}
+
+.btn-login{
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: .5s;
+}
+
+nav .btn-login:hover{
+    background-color: black;
+    color: white;
+}
+
+nav.sticky .btn-login {
+    border-color: white;
+    color: white;
+}
+
+nav.sticky .btn-login:hover {
+    color: black;
+    background-color: white;
+}
+
+/*========== Hamburger Menu ==========*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -5px;
+    opacity: 0;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+/*========== Hamburger Menu Animation ==========*/
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+/*========== End Hamburger Menu ==========*/
+/*========== End Navigation Bar ==========*/
+
+/*========== News Title ==========*/
+.news-title {
+    padding: 100px 0 50px 0;
+}
+.news-title h1{
+    font-size: 25px;
+}
+.writer {
+    padding-top: 10px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.time {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/*========== Content ==========*/
+/*========== Content Left ==========*/
+.content {
+    display: grid;
+    grid-template-areas: "left right";
+    width: 100%;
+    height: 100%;
+    padding: 0 100px;
+}
+
+.content-left {
+    grid-area: left;
+    padding-right: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.content-left h2{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.content-left img {
+    width: 500px;
+    padding-bottom: 10px;
+}
+/*========== End Content Left ==========*/
+
+/*========== Content Right ==========*/
+.content-right {
+    grid-area: right;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    padding-left: 15px;
+    background: #fcdb12;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 281px;
+}
+
+.content-right h2 {
+    padding: 20px 0 40px 0;
+}
+
+.content-right a{
+    text-decoration: none;
+    color: black;
+}
+
+.content-right img {
+    width: 80px;
+}
+
+.content-right article{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.content-right h3 {
+    font-size: 15px;
+    padding-left: 10px;
+} 
+/*========== End Content Right ==========*/
+/*========== End Content ==========*/
+
+/*========== Random News ==========*/
+/*========== Random News Title ==========*/
+.text-random-news {
+    padding: 100px 100px 0 100px;
+}
+
+.text-random-news h2 {
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+/*========== End Random News Title ==========*/
+
+.random-news {
+    display: grid;
+    grid-template-areas: "left main right";
+    padding: 10px 100px 100px 100px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+}
+
+.random-news img {
+    width: 100%;
+    padding: 10px;
+}
+
+.random-news a {
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+
+.random-news a:hover {
+    color: #161a58;
+}
+
+.random-news h3 {
+    text-align: center;
+}
+
+.random-news-left { 
+    grid-area: left;
+    grid-template-rows: 1fr;
+    padding-top: 15px;
+}
+
+.random-news-left img{
+    width: 300px;
+    padding-top: 10px;
+}
+.random-news-main {
+    grid-area: main;
+    grid-template-rows: 1fr;
+    padding-top: 15px;
+}
+
+.random-news-main img{
+    width: 300px;
+    padding-top: 10px;
+}
+
+.random-news-right {
+    grid-area: right;
+    grid-template-rows: 1fr;
+    padding-top: 15px;
+}
+
+.random-news-right img{
+    width: 300px;
+    padding-top: 10px;
+}
+/*========== End Random News ==========*/
+
+/*========== Footer ==========*/
+footer{
+    background: #0f0f0f;
+    color: white;
+}
+
+footer img{
+    padding: 10px 0;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+footer p{
+    padding-top: 10px;
+    line-height: 1.3;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-areas: "left right";
+    padding: 30px 50px;
+}
+
+.footer-left{
+    grid-area: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-right{
+    grid-area: right;
+}
+
+.copyright{
+    text-align: center;
+    background-color: #fcdb12;
+    width: 100%;
+    height: 50px;
+    position: block;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.footer-right i{
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+/*========== End Footer ==========*/
+
+/*========== Responsive Breakpoint ==========*/
+@media screen and (max-width: 1200px) {
+    .random-news img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .menu-toggle {
+        display: flex;
+        z-index: 1;
+    }
+    nav ul {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color:#fcdb12;
+        opacity: 1;
+        transition: all 0.5s;
+        transform: translateX(100%);
+    }
+    nav.sticky ul {
+        background-color: #0f0f0f;
+    }
+    nav ul.slide {
+        transform: translateX(0);
+    }
+    .nav-btnlogin {
+        color: rgb(255, 255, 255);
+    }
+    .content {
+        grid-template-areas: "left"
+                            "right";
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .random-news {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .random-news img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        z-index: 1;
+    }
+    nav img {
+        height: 25px;
+    }
+    nav ul {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fcdb12;
+        opacity: 1;
+        transition: all 0.5s;
+        transform: translateX(100%);
+    }
+    nav.sticky ul {
+        background-color: #0f0f0f;
+    }
+    nav ul.slide {
+        transform: translateX(0);
+    }
+    .nav-btnlogin {
+        color: rgb(255, 255, 255);
+    }
+    .fa-magnifying-glass {
+        opacity: 0;
+    }
+    .content-left img{
+        width: 100%;
+    }
+    .content-right img{
+        width: 100%;
+    }
+    .random-news {
+        grid-template-areas: "left"
+                            "main"
+                            "right";
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+        z-index: 1;
+    }
+    nav {
+        padding: 15px 50px;
+    }
+    nav h1 {
+        font-size: 5px;
+        padding: 0;
+    }
+    nav ul {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fcdb12;
+        opacity: 1;
+        transform: translateX(100%);
+        transition: all 0.5s;
+    }
+    nav.sticky ul {
+        background-color: #0f0f0f;
+    }
+    nav ul.slide {
+        transform: translateX(0);
+    }
+    .searchbox {
+        padding: 4px 0.5px;
+    }
+    .content h1 {
+        font-size: 20px;
+    }
+    .writer {
+        font-size: 13px;
+    }
+    .time {
+        font-size: 9px;
+    }
+    .content-left p{
+        font-size: 13px;
+    }
+    .content-left h2{
+        font-size: 15px;
+    }
+    .content-left img{
+        width: 100%;
+    }
+    .content-right img{
+        width: 100%;
+    }
+    .random-news {
+        grid-template-areas: "left"
+                            "main"
+                            "right";
+    }
+    .random-news h3 {
+        font-size: 15px;
+    }
+    .random-news img {
+        width: 100%;
+        height: 100%;
+    }
+    .text-random-news h2 {
+        font-size: 15px;
+    }
+    .footer-container {
+        grid-template-areas: "left"
+                            "right";
+        justify-content: center;
+        align-items: center;
+    }
+    footer p {
+        font-size: 10px;
+    }
+    .footer-left {
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-right{
+        margin-top: 30px;
+        text-align: center;
+    }
+    #tentang {
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*========== End Responsive Breakpoint ==========*/

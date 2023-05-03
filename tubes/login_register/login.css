@@ -1,0 +1,222 @@
+/*========== Link Fonts ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;1,300&family=Josefin+Sans&family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,600&family=Poppins:wght@200;300;400&display=swap');
+
+/*========== HTML ==========*/
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(.././assets/img/bg_yellow.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*========== Form Log In ==========*/
+.login-page {
+    width: 100%;
+    height: 100%;
+}
+
+.form-box {
+    width: 380px;
+	height: 450px;
+	position: relative;
+	margin: 80px auto;
+	background: rgba(0,0,0,0.3);
+	padding :10px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+}
+
+.form-box h2 {
+    text-align: center;
+    padding-top: 35px;
+    color: white;
+}
+
+.button-box {
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	border-radius: 30px;
+}
+.toggle-btn {
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+
+.input-group-login {
+    top: 120px;
+	position: absolute;
+	width: 280px;
+}
+
+.input-field {
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid white;
+	outline: none;
+	background: transparent;
+}
+
+.submit-btn {
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: #F9F871;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+    color: black;
+    font-size: 15px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+}
+
+.check-box {
+	margin: 30px 10px 25px 0;
+}
+
+span {
+	color: white;
+	font-size: 12px;
+	bottom: 5px;
+}
+
+.link-register {
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+    text-align: center;
+}
+
+.link-register a {
+    color: white;
+    transition: .5s;
+}
+
+.link-register a:hover {
+    color: #161a58;
+}
+
+#login {
+	left: 50px;
+}
+
+#login input {
+	color:white;
+	font-size: 15px;
+}
+
+::-webkit-input-placeholder {
+	color: white;
+}
+/*========== End Form Log In ==========*/
+
+/*========== Footer ==========*/
+footer{
+    background: #0f0f0f;
+    color: white;
+}
+
+footer img{
+    padding: 10px 0;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+footer p{
+    padding-top: 10px;
+    line-height: 1.3;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-areas: "left right";
+    padding: 30px 50px;
+}
+
+.footer-left{
+    grid-area: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-right{
+    grid-area: right;
+}
+
+.copyright{
+    text-align: center;
+    background-color: #fcdb12;
+    width: 100%;
+    height: 50px;
+    position: block;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.footer-right i{
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+/*========== End Footer ==========*/
+
+/*========== Responsive Breakpoint ==========*/
+@media screen and (max-width: 576px) {
+	.form-box {
+		width: 280px;
+        height: 440px;
+	}
+	.submit-btn {
+		width: 75%;
+	}
+	#login {
+		left: 45px;
+	}
+	.input-field {
+		width: 200px;
+	}
+
+    .input-group-login{
+        width: 200px;
+    }
+	.footer-container {
+        grid-template-areas: "left"
+                            "right";
+        justify-content: center;
+        align-items: center;
+    }
+    footer p {
+        font-size: 10px;
+    }
+    .footer-left {
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-right{
+        margin-top: 30px;
+        text-align: center;
+    }
+    #tentang {
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*========== End Responsive Breakpoint ==========*/
