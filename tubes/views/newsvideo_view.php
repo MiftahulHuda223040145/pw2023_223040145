@@ -1,54 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOM Video</title>
-
-<!--========== Link CSS ==========-->
-    <link rel="stylesheet" href="news_video.css">
-
-<!--========== Link Icons ==========-->
-    <script src="https://kit.fontawesome.com/147cba14f0.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-<!--========== Navigation Bar ==========-->
-    <header>
-        <nav>
-            <div class="logo">
-                <img src=".././assets/img/logoputih.png" alt="">
-            </div>
-
-            <div class="searchbox">
-                <input type="search" placeholder="Cari">
-                <button id="search"><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></button>
-            </div>
-
-            <div class="nav-list"></div>
-                <ul>
-                    <li><a href="#home" class="nav-content">Home</a></li>
-                    <li><a href="#berita-trending" class="nav-content">Trending</a></li>
-                    <li><a href="#berita-video" class="nav-content">Video</a></li>
-                    <li><a href="#tentang" class="nav-content">Tentang</a></li>
-                    <li><a href=".././login_register/login.php" class="nav-btnlogin"><button class="btn-login">Login</button></a></li>
-                </ul>
-            </div>
-            
-            <div class="menu-toggle">
-                <input type="checkbox">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>  
-    </header>
-<!--========== End Navigation Bar ==========-->
+<link rel="stylesheet" href=".././css/news_video.css">
 
 <!--========== Content ==========-->
-    <main class="video-content">
+<main class="video-content">
         <section class="content-left">
             <div class="video-left">
                 <video controls>
@@ -183,33 +136,5 @@
     </main>
 <!--========== End random-news Section ==========-->
 
-<!--========== Footer ==========-->
-    <footer id="tentang">
-        <div class = "footer-container">
-            <div class = "footer-left">
-                <a href=".././landing_page/index.php">
-                    <img src=".././assets/img/logoputih.png" alt="">
-                </a>
-                <h2>Tentang</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad corrupti non magni nam neque corporis tempore officiis, numquam perferendis eius earum consequuntur molestiae obcaecati nulla eveniet autem maxime, provident quae.</p>
-            </div>
-            <div class = "footer-right">
-                <h2>Contact Me</h2>
-
-                <div class="footer-icon">
-                    <a href="https://www.instagram.com/miphld/?hl=id"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/miftahul-huda-4468a724b/"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p>Miftahul Huda | 223040145 | Universitas Pasundan</p>
-        </div>
-    </footer>
-<!--========== End footer ==========-->
-
 <!--========== Link Javascript ==========-->
-    <script src="news_page.js"></script>
-</body>
-</html>
+<script src=".././js/script.js"></script>

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>User</title>
+	<title>SOM | Admin</title>
 
 <!--========== Link CSS ==========-->
-    <link rel="stylesheet" href="user.css"> 
+    <link rel="stylesheet" href="admin.css"> 
 <!--========== Link Icons ==========-->
 	<script src="https://kit.fontawesome.com/147cba14f0.js" crossorigin="anonymous"></script>
 </head>
@@ -17,7 +17,7 @@
 <!--========== Side Bar ==========-->
   	<div class="sidebar">
 		<div class="logo-details">
-		<img src=".././assets/img/logohitam.png" alt="" class="logo">
+		<img src="../assets/img/logohitam.png" alt="" class="logo">
 			<div class="logo_name">Sense Of Mip</div>
 			<i class="fa-solid fa-bars" id="btn"></i>
 		</div>
@@ -35,6 +35,12 @@
 			</li>
 			<li>
 				<a href="#" class="link-list">
+					<i class="fa-solid fa-users"></i>
+					<span class="list_name">User</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="link-list">
 					<i class="fa-solid fa-gear"></i>
 					<span class="list_name">Setting</span>
 				</a>
@@ -45,7 +51,7 @@
 					<div class="profile-details">
 						<img src=".././assets/img/profile.jpg" alt="">
 						<div class="name_desc">
-							<div class="name">User</div>
+							<div class="name">Admin</div>
 							<div class="desc">Lorem Ipsum</div>
 						</div>
 					</div>
@@ -65,6 +71,6 @@
 <!--========== End Content ==========-->
 
 <!--========== Link Javascript ==========-->
-	<script src="dashboard.js"></script>
+	<script src="../js/dashboard.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <title>SOM</title>
 
 <!--========== Link CSS ==========-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 <!--========== Link Icons ==========-->
     <script src="https://kit.fontawesome.com/147cba14f0.js" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
     <header>
         <nav>
             <div class="logo-pict">
-                <img src=".././assets/img/logoputih.png" alt="">
+                <img src="assets/img/logoputih.png" alt="">
             </div>
                         
             <div class="searchbox">
@@ -33,7 +33,7 @@
                     <li><a href="#berita-trending" class="nav-content">Trending</a></li>
                     <li><a href="#berita-video" class="nav-content">Video</a></li>
                     <li><a href="#tentang" class="nav-content">Tentang</a></li>
-                    <li><a href=".././login_register/login.php" class="nav-btnlogin"><button class="btn-login">Login</button></a></li>
+                    <li><a href="../login_register/login.php" class="nav-btnlogin"><button class="btn-login">Login</button></a></li>
                 </ul>
             </div>
             
@@ -46,7 +46,8 @@
         </nav>  
     </header>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
 <!--========== Home Page ==========-->
   <!-- Swiper -->
@@ -54,21 +55,21 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <a href=".././news_page/news.php">
+                    <a href="news_page/news.php">
                         <h1>Lorem Ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                        <img src=".././assets/img/pict1.jpg" alt="">
+                        <img src="assets/img/pict1.jpg" alt="">
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href=".././news_page/news.php">
+                    <a href="news_page/news.php">
                         <h1>Lorem Ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                        <img src=".././assets/img/pict2.jpg" alt="">
+                        <img src="assets/img/pict2.jpg" alt="">
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href=".././news_page/news.php">
+                    <a href="news_page/news.php">
                         <h1>Lorem Ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                        <img src=".././assets/img/pict3.jpg" alt="">
+                        <img src="assets/img/pict3.jpg" alt="">
                     </a>
                 </div>
             </div>
@@ -84,11 +85,11 @@
         <div class="content-trend-wrap">
             <h2>Berita Trending</h2>
             <div class="artikel-wrap">
-                <a href=".././news_page/news.php" class="link-artikel1">
+                <a href="news_page/news.php" class="link-artikel1">
                     <div class="artikel-1">
                         <div class="card">
                             <div class="thumb">
-                                <img src=".././assets/img/banner.png" alt="">
+                                <img src="assets/img/banner.png" alt="">
                             </div>
                             <article>
                                 <h3>Berita Trending 1</h3>
@@ -98,11 +99,11 @@
                     </div>
                 </a>
 
-                <a href=".././news_page/news.php" class="link-artikel2">
+                <a href="news_page/news.php" class="link-artikel2">
                     <div class="artikel-2">
                         <div class="card">
                             <div class="thumb">
-                                <img src=".././assets/img/banner.png" alt="">
+                                <img src="assets/img/banner.png" alt="">
                             </div>
                             <article>
                                 <h3>Berita Trending 2</h3>
@@ -112,11 +113,11 @@
                     </div>
                 </a>
                     
-                <a href=".././news_page/news.php" class="link-artikel3">
+                <a href="news_page/news.php" class="link-artikel3">
                     <div class="artikel-3">
                         <div class="card">
                             <div class="thumb">
-                                <img src=".././assets/img/banner.png" alt="">
+                                <img src="assets/img/banner.png" alt="">
                             </div>
                             <article>
                                 <h3>Berita Trending 3</h3>
@@ -132,10 +133,10 @@
 
 <!--========== Featured News ==========-->
     <section class="featured-news">
-        <a href=".././news_page/news.php">
+        <a href="news_page/news.php">
             <div class="featured-content">
                 <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam quibusdam tempora soluta</h2>
-                <img src=".././assets/img/pict4.jpg" alt="">
+                <img src="assets/img/pict4.jpg" alt="">
             </div>
         </a>
     </section>
@@ -146,9 +147,9 @@
         <section class = "main-content-left">
             <h2>Rekomendasi Untuk Anda</h2>
             <div class = "content-left">
-                <a href=".././news_page/news.php">
+                <a href="news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner.png">
+                        <img src = "assets/img/banner.png">
                         <div>
                             <h3>Berita Rekomendasi 1</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi iure modi animi cupiditate. Explicabo, nihil?</p>   
@@ -156,9 +157,9 @@
                     </article>
                 </a>
 
-                <a href=".././news_page/news.php">
+                <a href="news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner.png">
+                        <img src = "assets/img/banner.png">
                         <div>
                             <h3>Berita Rekomendasi 2</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi iure modi animi cupiditate. Explicabo, nihil?</p>   
@@ -166,9 +167,9 @@
                     </article>
                 </a>
                     
-                <a href=".././news_page/news.php">
+                <a href="news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner.png">
+                        <img src = "assets/img/banner.png">
                         <div>
                             <h3>Berita Rekomendasi 3</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi iure modi animi cupiditate. Explicabo, nihil?</p>   
@@ -181,9 +182,9 @@
         <section class = "main-content-right">
             <h2>Terbaru</h2>
             <div class="content-right"> 
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Terbaru 1</h3>
                             <p>(Keterangan waktu)</p>   
@@ -191,9 +192,9 @@
                     </article>
                 </a>
 
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Terbaru 2</h3>
                             <p>(Keterangan waktu)</p> 
@@ -201,9 +202,9 @@
                     </article>
                 </a>
 
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Terbaru 3</h3>
                             <p>(Keterangan waktu)</p>    
@@ -211,9 +212,9 @@
                     </article>
                 </a>
 
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Terbaru 4</h3>
                             <p>(Keterangan waktu)</p>    
@@ -221,9 +222,9 @@
                     </article>
                 </a>
 
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Terbaru 5</h3>
                             <p>(Keterangan waktu)</p>    
@@ -231,9 +232,9 @@
                     </article>
                 </a>
 
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Terbaru 6</h3>
                             <p>(Keterangan waktu)</p>    
@@ -241,9 +242,9 @@
                     </article>
                 </a>
 
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Terbaru 7</h3>
                             <p>(Keterangan waktu)</p> 
@@ -251,9 +252,9 @@
                     </article>
                 </a>
 
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Terbaru 8</h3>
                             <p>(Keterangan waktu)</p> 
@@ -269,36 +270,36 @@
     <section class="banner-video" id="berita-video">
         <h2>Tonton Juga</h2>
         <div class="video-top">
-            <a href=".././news_page/news_video.php">
+            <a href="news_page/news_video.php">
                 <video class="video" autoplay loop muted>
-                    <source src=".././assets/video/banner_video.mp4">
+                    <source src="assets/video/banner_video.mp4">
                 </video>
                 <h3>Berita Video 1</h3>
             </a>
         </div>
         
         <div class="video-wrap">
-            <a href=".././news_page/news_video.php">
+            <a href="news_page/news_video.php">
                 <video class="video1" autoplay loop muted>
-                    <source src=".././assets/video/banner_video.mp4">
+                    <source src="assets/video/banner_video.mp4">
                 </video>
                 <h3>Berita Video 2</h3>
             </a>
-            <a href=".././news_page/news_video.php">
+            <a href="news_page/news_video.php">
                 <video class="video2" autoplay loop muted>
-                    <source src=".././assets/video/banner_video.mp4">
+                    <source src="assets/video/banner_video.mp4">
                 </video>
                 <h3>Berita Video 3</h3>
             </a>
-            <a href=".././news_page/news_video.php">
+            <a href="news_page/news_video.php">
                 <video class="video3" autoplay loop muted>
-                    <source src=".././assets/video/banner_video.mp4">
+                    <source src="assets/video/banner_video.mp4">
                 </video>
                 <h3>Berita Video 4</h3>
             </a>
-            <a href=".././news_page/news_video.php">
+            <a href="news_page/news_video.php">
                 <video class="video4" autoplay loop muted>
-                    <source src=".././assets/video/banner_video.mp4">
+                    <source src="assets/video/banner_video.mp4">
                 </video>
                 <h3>Berita Video 5</h3>
             </a>
@@ -311,34 +312,34 @@
         <section class="random-news-left">
             <div class="random-news-left-top">
                 <p>Lorem</p>
-                <a href=".././news_page/news.php">
+                <a href="news_page/news.php">
                     <article>
-                        <img src=".././assets/img/banner.png" alt="">
+                        <img src="assets/img/banner.png" alt="">
                         <h3>Berita Random left 1</h3>
                     </article>
                 </a>
             </div>
 
             <div class="random-news-left-bottom">
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Random left 2</h3>   
                         </div>
                     </article>
                 </a>
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Random left 3</h3>   
                         </div>
                     </article>
                 </a>
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Random left 4</h3>
                         </div>
@@ -349,26 +350,26 @@
 
         <section class="random-news-main">
             <div class="random-news-main-top">
-                <a href=".././news_page/news.php">
+                <a href="news_page/news.php">
                     <article>
-                        <img src=".././assets/img/banner.png" alt="">
+                        <img src="assets/img/banner.png" alt="">
                         <h3>Berita Random Main 1</h3>
                     </article>
                 </a>
             </div>
 
             <div class="random-news-main-bottom">
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Random Main 2</h3>   
                         </div>
                     </article>
                 </a>
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                             <div>
                                 <h3>Berita Random Main 3</h3>
                             </div>
@@ -380,34 +381,34 @@
         <section class="random-news-right">
             <div class="random-news-right-top">
                 <p>Lorem</p>
-                <a href=".././news_page/news.php">
+                <a href="news_page/news.php">
                     <article>
-                        <img src=".././assets/img/banner.png" alt="">
+                        <img src="assets/img/banner.png" alt="">
                         <h3>Berita Random Right 1</h3>
                     </article>
                 </a>
             </div>
 
             <div class="random-news-right-bottom">
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Random Right 2</h3>
                         </div>
                     </article>
                 </a>
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Random Right 3</h3>   
                         </div>
                     </article>
                 </a>
-                <a href = ".././news_page/news.php">
+                <a href = "news_page/news.php">
                     <article>
-                        <img src = ".././assets/img/banner2.png">
+                        <img src = "assets/img/banner2.png">
                         <div>
                             <h3>Berita Random Right 4</h3>
                         </div>
@@ -419,11 +420,11 @@
 <!--========== End Random News Section ==========-->
 
 <!--========== Footer ==========-->
-    <footer id="tentang">
+<footer id="tentang">
         <div class = "footer-container">
             <div class = "footer-left">
-                <a href=".././landing_page/index.php">
-                    <img src=".././assets/img/logoputih.png" alt="">
+                <a href="#home">
+                    <img src="assets/img/logoputih.png" alt="">
                 </a>
                 <h2>Tentang</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad corrupti non magni nam neque corporis tempore officiis, numquam perferendis eius earum consequuntur molestiae obcaecati nulla eveniet autem maxime, provident quae.</p>
@@ -445,6 +446,6 @@
 <!--========== End footer ==========-->
 
 <!--========== Link Javascript ==========-->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
