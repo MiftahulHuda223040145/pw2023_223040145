@@ -25,3 +25,17 @@ function menuBtnChange() {
 }
 // End change icon hamburger menu and a close
 // End Sidebar
+
+var dashboard = document.getElementById('dashboard');
+var users = document.getElementById('users');
+var btndash = document.getElementById('btn-dash');
+var btnusers = document.getElementById('btn-users');
+
+function dashboard (){
+  dashboard.style.transform = "translateX(0)";
+  users.style.transform = "translateX(100%)";
+}
+function userss (){
+  dashboard.style.transform = "translateX(100%)";
+  users.style.transform = "translateX(0)";
+}

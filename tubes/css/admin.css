@@ -259,9 +259,8 @@
 /*========== End Profile and Log Out ==========*/
 /*========== End Sidebar ==========*/
 
-/*========== Content ==========*/
-.content{
-  position: relative;
+.hero {
+  position: absolute;
   background: #E4E9F7;
   min-height: 100vh;
   top: 0;
@@ -269,18 +268,128 @@
   width: 100%;
   transition: all 0.5s ease;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 
-.sidebar.open ~ .content{
+/*========== Content ==========*/
+.users_content{
+  position: absolute;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: 100%;
+  transition: all 0.5s ease;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  transform: translateX(100%);
+}
+
+.sidebar.open ~ .users_content{
   left: 250px;
   width: 100%;
 }
 
-.content .text{
-  display: inline-block;
-  color: #11101d;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 18px
+.users_container {
+  border-radius: 50px;
+  background-color: rgba(148, 148, 148, 0.5);
+  padding-top: 20px;
+  width: 80%;
+  left: 0;
+  align-items: center;
 }
+
+.users_searchcontent input {
+  border: 2px;
+  outline: none;
+  text-align: center;
+}
+
+.users_searchcontent button {
+  padding: 0 10px;
+  margin-left: 5px;
+  outline: none;
+  border: 2px;
+  background-color: black;
+}
+
+.users_searchcontent {
+  display: flex;
+  padding: 20px 0 40px 0;
+}
+
+.users_searchcontent h2{
+  padding: 0 30px;
+}
+
+.users_content table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: rgba(0, 0, 0, 0.80);
+  padding-bottom: 50px;
+}
+.users_content th {
+  padding: 1rem;
+  text-align: center;
+  background-color: #fcdb12;
+}
+.users_content td {
+  padding: 1rem;
+  background-color: rgb(240, 240, 240);
+}
+
+.users_content i {
+  padding: 0 10px;
+}
+
+#users_gear {
+  background-color: rgb(23, 23, 146);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#users_trash {
+  background-color: rgb(165, 17, 17);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 /*========== End Content ==========*/
+
+.dashboard_content{
+  position: absolute;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: 100%;
+  transition: all 0.5s ease;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  transform: translateX(100%);
+}
+
+.sidebar.open ~ .dashboard_content{
+  left: 250px;
+  width: 100%;
+}
+
+
+#dashboard {
+  transform: translateX(0);
+}

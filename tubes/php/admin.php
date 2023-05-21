@@ -1,3 +1,8 @@
+<?php 
+require ('functions.php');
+$dbusers = query("SELECT * FROM users");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +12,7 @@
 	<title>SOM | Admin</title>
 
 <!--========== Link CSS ==========-->
-    <link rel="stylesheet" href="admin.css"> 
+    <link rel="stylesheet" href="../css/admin.css"> 
 <!--========== Link Icons ==========-->
 	<script src="https://kit.fontawesome.com/147cba14f0.js" crossorigin="anonymous"></script>
 </head>
@@ -27,20 +32,20 @@
 				<i class="fa-solid fa-magnifying-glass"></i>
 				<input type="text" placeholder="Search...">
 			</li>
-			<li>
+			<li onclick="dash" id="btn-dash">
 				<a href="#" class="link-list">
 					<i class="fa-solid fa-table-columns"></i>
 					<span class="list_name">Dashboard</span>
 				</a>
 			</li>
-			<li>
-				<a href="#" class="link-list">
+			<li onclick="userss" id="btn-users">
+				<a href="#users" class="link-list">
 					<i class="fa-solid fa-users"></i>
-					<span class="list_name">User</span>
+					<span class="list_name">Users</span>
 				</a>
 			</li>
 			<li>
-				<a href="#" class="link-list">
+				<a href="" class="link-list">
 					<i class="fa-solid fa-gear"></i>
 					<span class="list_name">Setting</span>
 				</a>
@@ -65,9 +70,49 @@
 <!--========== End Side Bar ==========-->
 
 <!--========== Content ==========-->
-  	<section class="content">
-		<h1></h1>
+	<section class="hero">
+	</section>
+
+	<section class="dashboard_content" id="dashboard">
+		<h1>dashboard</h1>
+	</section>
+
+  	<section class="users_content" id="users">
+		  <div class="users_container">
+			<div class="users_search">
+				<div class="users_searchcontent">
+					<h2>Cari User</h2>
+					<input type="search" placeholder="Cari">
+					<button id="search"><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></button>
+				</div>
+			</div>
+
+			<div class="users_table">
+				<table border="1" cellspacing="0">
+					<tr>
+						<th>No</th>
+						<th>Nama</th>
+						<th>Email</th>
+						<th>Password</th>
+						<th>Aksi</th>
+					</tr>
+					<?php $no = 1; ?>
+					<?php foreach ($dbusers as $users) { ?>
+					<tr>
+						<td><?= $users ["No"]; ?></td>
+						<td><?= $users ["Nama"]; ?></td>
+						<td><?= $users ["Email"]; ?></td>
+						<td><?= $users ["Password"]; ?></td>
+						<td><a href=""><i class="fa-solid fa-gear" id="users_gear"></i></a>
+						<a href=""><i class="fa-solid fa-trash" id="users_trash"></i></a></td>
+					</tr>
+					<?php $no++; ?>
+					<?php } ?>
+				</table>
+			</div>
+		</div>
   	</section>
+
 <!--========== End Content ==========-->
 
 <!--========== Link Javascript ==========-->
