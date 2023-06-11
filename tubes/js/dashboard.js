@@ -1,7 +1,6 @@
 // Sidebar
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
-let searchBtn = document.querySelector(".fa-magnifying-glass");
 
 // When Hamburger menu is clicked, The Sidebar (class ".open") will run
 closeBtn.addEventListener("click", ()=>{
@@ -9,33 +8,36 @@ closeBtn.addEventListener("click", ()=>{
 });
 // End Hamburger menu for The Sidebar (class ".open")
 
-// When Search button is clicked, The Sidebar (class ".open") will run
-searchBtn.addEventListener("click", ()=>{
-  sidebar.classList.toggle("open");
-});
-// End Search button for The Sidebar (class ".open")
-
-// When The Sidebar (class ".open") is run, The Hamburger menu will changes to a close icon and the opposite
 function menuBtnChange() {
- if(sidebar.classList.contains("open")){
-   closeBtn.classList.replace("fa-bars", "fa-xmark"); // Change Icon when to The sidebar open
- }else {
-   closeBtn.classList.replace("fa-xmark","fa-bars");// Change Icon when to The Sidebar close
- }
+  if(sidebar.classList.contains("open")){
+    closeBtn.classList.replace("fa-xmark", "fa-bars"); // Change Icon when to The sidebar open
+  }else {
+    closeBtn.classList.replace("fa-bars","fa-xmark");// Change Icon when to The Sidebar close
+  }
 }
-// End change icon hamburger menu and a close
-// End Sidebar
+ // End change icon hamburger menu and a close
+ // End Sidebar
 
-var dashboard = document.getElementById('dashboard');
-var users = document.getElementById('users');
-var btndash = document.getElementById('btn-dash');
-var btnusers = document.getElementById('btn-users');
+function dashboard() {
+  var db = document.getElementById("dashboard");
+  db.classList.add("collapse-in");
+}
+function users() {
+  var users = document.getElementById("users");
+  users.classList.add("collapse-in");
+}
+function setting() {
+  var set = document.getElementById("setting");
+  set.classList.add("collapse-in");
+}
 
-function dashboard (){
-  dashboard.style.transform = "translateX(0)";
-  users.style.transform = "translateX(100%)";
-}
-function userss (){
-  dashboard.style.transform = "translateX(100%)";
-  users.style.transform = "translateX(0)";
-}
+$(document).ready(function () {
+  $('#keyword').on('keyup', function () {
+      $.get('../../php/ajax/search.php?keyword=' + $('#keyword').val(), function (data) {
+
+          $('.table').html(data);
+
+      });
+
+  });
+});

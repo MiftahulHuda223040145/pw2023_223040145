@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url(.././assets/img/bg_yellow.jpg);
+    background-image: url(.././assets/img/bg-black.jpg);
     background-size: cover;
     background-position: center;
     font-family: 'Poppins', sans-serif;
@@ -30,6 +30,10 @@ body {
 	padding :10px;
     overflow: hidden;
     backdrop-filter: blur(20px);
+}
+
+.form-box p {
+    color: white;
 }
 
 .form-box h2 {

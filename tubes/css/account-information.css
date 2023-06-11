@@ -1,0 +1,170 @@
+/*========== Link Fonts ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;1,300&family=Josefin+Sans&family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,600&family=Poppins:wght@200;300;400&display=swap');
+/*========== HTML ==========*/
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: white;
+    background-attachment: fixed;
+}
+
+nav {
+    width: 100%;
+    background-color: black;
+    display: flex;
+}
+
+.back {
+    font-size: 20px;
+    padding: 5px 5px 5px 20px;
+    margin: 10px;
+}
+
+.back a {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    color: white;
+}
+
+.photo-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.photo-profile img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.pp-edit {
+    background-color: rgba(0, 0, 0, 0.164);
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pp-edit:hover {
+    opacity: 1;
+}
+
+.pp-edit i {
+    font-size: 30px;
+    color: white;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+.pp-edit p {
+ color: white;
+}
+
+label .pp-edit p {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.pp-container input {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 1  ;
+    color: transparent;
+    outline: none;
+}
+
+.pp-container input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.pp-container input:hover {
+opacity: 1;
+}
+
+.email {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+.username {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+.password {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+.email a,
+.username a,
+.password a {
+    color: black;
+}
+
+section a {
+    text-decoration: none;
+}
+
+section p {
+    padding-top: 5px;
+}
+
+.logout {
+    padding: 20px;
+}
+
+.logout a {
+    color: rgb(160, 14, 14);
+
+}
+
+/*========== Responsive Breakpoint ==========*/
+@media screen and (max-width: 576px) {
+    .title {
+        font-size: 12px;
+    }
+    section h2 {
+        font-size: 20px;
+    }
+    section p {
+        font-size: 15px;
+    }
+}

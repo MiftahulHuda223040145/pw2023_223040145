@@ -14,10 +14,19 @@ window.addEventListener('scroll', ()=> {
     } else {
         nav.classList.remove('sticky'); // else not remove class sticky
     }
-
 });
 // End Changing color
 // End Animation Navigation List
+
+function menuBtnChange() {
+    if(sidebar.classList.contains("open")){
+      closeBtn.classList.replace("fa-bars", "fa-xmark"); // Change Icon when to The sidebar open
+    }else {
+      closeBtn.classList.replace("fa-xmark","fa-bars");// Change Icon when to The Sidebar close
+    }
+}
+   // End change icon hamburger menu and a close
+   // End Sidebar
 
 // From Swiper JS
 var swiper = new Swiper(".mySwiper", {
@@ -28,3 +37,14 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 // End Swiper JS
+
+$(document).ready(function () {
+  $('#keyword').on('keyup', function () {
+      $.get('php/ajax/pencarian.php?keyword=' + $('#keyword').val(), function (data) {
+
+          $('.table').html(data);
+
+      });
+
+  });
+});

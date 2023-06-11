@@ -41,6 +41,7 @@ nav img{
     height: 30px;
 }
 
+
 .searchbox{
     background-color: rgba(255, 255, 255, 0.445);
     border-radius: 10px;
@@ -64,6 +65,7 @@ nav button {
     background: transparent;
     outline: none;
     cursor: pointer;
+    border: none;
 }
 
 .searchbox button{
@@ -119,11 +121,11 @@ nav.sticky ul li .nav-content{
     width: 100px;
     height: 30px;
     border: 2px solid black;
-    color: black;
     border-radius: 5px;
     font-size: 1.1em;
     font-weight: 500;
     transition: .5s;
+    text-decoration: none;
 }
 
 nav .btn-login:hover{
@@ -139,6 +141,30 @@ nav.sticky .btn-login {
 nav.sticky .btn-login:hover {
     color: black;
     background-color: white;
+}
+
+
+.btnaccif img{
+    border-radius: 50%;
+    background: transparent;
+    outline: none; 
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.btnaccif{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 /*========== Hamburger Menu ==========*/
@@ -203,12 +229,12 @@ nav.sticky .btn-login:hover {
     width: 100%;
     height: 100%;
     margin-top: 50px;
-    padding: 100px;
+    padding: 100px 100px 0 100px;
 }
 
 .swiper {
     width: 1140px;
-    height: 380px;
+    height: 450px;
 }
 
 .color {
@@ -239,6 +265,39 @@ nav.sticky .btn-login:hover {
     color: black;
 }
 /*========== End Home Page ==========*/
+
+/*--========== Featured News ==========*/
+.featured-news {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 70px 100px;
+}
+
+.featured-news a {
+    text-decoration: none;
+}
+
+.featured-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-content h2 {
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding: 0 100px;
+}
+
+.featured-news img{
+    align-items: center;
+    justify-content: center;
+    width: 1140px;
+    height: 200px;
+}
+/*--========== End Featured News ==========*/
 
 /*========== Trending Content ==========*/
 .content-trend {
@@ -327,39 +386,6 @@ nav.sticky .btn-login:hover {
 /*========== End card ==========*/
 /*========== End Trending Content ==========*/
 
-/*--========== Featured News ==========*/
-.featured-news {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding: 70px 100px;
-}
-
-.featured-news a {
-    text-decoration: none;
-}
-
-.featured-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.featured-content h2 {
-    position: absolute;
-    text-align: center;
-    color: white;
-    padding: 0 100px;
-}
-
-.featured-news img{
-    align-items: center;
-    justify-content: center;
-    width: 1100px;
-    height: 200px;
-}
-/*--========== End Featured News ==========*/
-
 /*========== Main Content ==========*/
 .main-content {
     background-color: white ;
@@ -443,7 +469,7 @@ nav.sticky .btn-login:hover {
     padding-left: 10px;
 }
 /*========== End Main Content Right ==========*/
-/*========== Main Content ==========*/
+/*========== End Main Content ==========*/
 
 /*========== News Video Section ==========*/
 .banner-video {
@@ -455,12 +481,12 @@ nav.sticky .btn-login:hover {
     padding: 20px 100px 0 100px;
 }
 
-.banner-video .video-top {
+.video-top {
     padding-top: 50px;
     width: 100%;
 }
 
-.banner-video .video-top video {
+.video-top video {
     width: 700px;
 }
 
@@ -476,12 +502,19 @@ nav.sticky .btn-login:hover {
     color: black;
 }
 
-.video-wrap {
-    display: grid;
-    grid-template-areas: "Left main main right";
-    justify-content: space-around;
-    align-items: center;
-    padding: 40px 0;
+.video-container {
+    float: left;
+}
+
+.cont {
+    justify-content: center;
+    display: flex;
+    padding-top: 50px;
+}
+
+.clearfix{
+    clear: both;
+    padding-bottom: 50px;
 }
 
 .video-wrap a {
@@ -494,20 +527,8 @@ nav.sticky .btn-login:hover {
 }
 
 .video-wrap video{
-    width: 300px;
+    width: 250px;
     padding: 10px;
-}
-
-.video1 {
-    grid-area: left;
-}
-
-.video2, .video4 {
-    grid-area: main;
-}
-
-.video3 {
-    grid-area: left;
 }
 /*========== End News Video Section ==========*/
 
@@ -854,11 +875,6 @@ footer p{
         width: 100%;
         height: 100%;
     }
-    .video-wrap {
-        grid-template-areas: "left"
-                            "main"
-                            "right";
-    }
     .video-wrap video {
         width: 100%;
     }
@@ -962,10 +978,8 @@ footer p{
     .content-right h3 {
         font-size: 15px;
     }
-    .video-wrap {
-        grid-template-areas: "left"
-                            "main"
-                            "right";
+    .cont {
+        display: block;
     }
     .random-news {
         grid-template-areas: "left"

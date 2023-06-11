@@ -7,7 +7,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
-  overflow: hidden;
 }
 
 /*========== Sidebar ==========*/
@@ -21,6 +20,7 @@
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
+  overflow: hidden;
 }
 
 .sidebar.open{
@@ -185,6 +185,20 @@
   transition: all 0.5s ease;
   color: white;
 }
+
+#users_gear {
+  background-color: rgb(23, 23, 146);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#users_trash {
+  background-color: rgb(165, 17, 17);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
 /*========== End Sidebar List ==========*/
 
 /*========== Profile and Log Out ==========*/
@@ -259,7 +273,8 @@
 /*========== End Profile and Log Out ==========*/
 /*========== End Sidebar ==========*/
 
-.hero {
+/*========== Welcome ==========*/
+.welcome {
   position: absolute;
   background: #E4E9F7;
   min-height: 100vh;
@@ -272,12 +287,24 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
+
 }
 
-/*========== Content ==========*/
-.users_content{
-  position: absolute;
+.sidebar.open ~ .welcome{
+  left: 250px;
+  width: 100%;
+}
+
+.welcome h1 {
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+}
+/*========== End Welcome ==========*/
+
+/*========== Dashboard ==========*/
+.dashboard_content {
+  position: relative;
   background: #E4E9F7;
   min-height: 100vh;
   top: 0;
@@ -285,13 +312,56 @@
   width: 100%;
   transition: all 0.5s ease;
   z-index: 2;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
-  transform: translateX(100%);
+  display: flex;
 }
+.sidebar.open ~ .dashboard_content{
+  left: 250px;
+  width: 100%;
+}
+
+/*========== End Dashboard ==========*/
+
+/*========== Users ==========*/
+.title-user {
+  position: relative;
+  background: #E4E9F7;
+  top: 0;
+  left: 78px;
+  width: 100%;
+  transition: all 0.5s ease;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  padding: 50px 0;
+  font-size: 25px;
+}
+
+.sidebar.open ~ .title-user {
+  left: 250px;
+  width: 100%;
+}
+
+.users_content {
+  position: relative;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: 100%;
+  transition: all 0.5s ease;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  padding: 50px 0;
+}
+
 
 .sidebar.open ~ .users_content{
   left: 250px;
@@ -302,9 +372,11 @@
   border-radius: 50px;
   background-color: rgba(148, 148, 148, 0.5);
   padding-top: 20px;
-  width: 80%;
   left: 0;
   align-items: center;
+  width: 95%;
+  padding: 10px 40px;
+  position: relative;
 }
 
 .users_searchcontent input {
@@ -326,6 +398,10 @@
   padding: 20px 0 40px 0;
 }
 
+.form-search {
+  display: flex;
+}
+
 .users_searchcontent h2{
   padding: 0 30px;
 }
@@ -336,39 +412,56 @@
   justify-content: center;
   border: rgba(0, 0, 0, 0.80);
   padding-bottom: 50px;
+  position: relative;
 }
+
+.users_content img {
+  width: 100px;
+}
+
 .users_content th {
   padding: 1rem;
   text-align: center;
   background-color: #fcdb12;
+  word-wrap: break-word;
 }
 .users_content td {
   padding: 1rem;
   background-color: rgb(240, 240, 240);
+  word-wrap: break-word;
+}
+
+.pass {
+  word-wrap: break-word;
+  font-size: 10px;
 }
 
 .users_content i {
   padding: 0 10px;
 }
 
-#users_gear {
-  background-color: rgb(23, 23, 146);
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
+.tambah-data {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 0.78;
 }
 
-#users_trash {
-  background-color: rgb(165, 17, 17);
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
+.tambah-data a {
+  background-color: #fcdb12;
+  padding: 10px 10px;
+  text-decoration: none;
 }
 
-/*========== End Content ==========*/
+.tambah-data i {
+  color: black;
+  font-weight: bold;
+}
+/*========== End Users ==========*/
 
-.dashboard_content{
-  position: absolute;
+
+/*========== Setting ==========*/
+.setting-content {
+  position: relative;
   background: #E4E9F7;
   min-height: 100vh;
   top: 0;
@@ -376,20 +469,67 @@
   width: 100%;
   transition: all 0.5s ease;
   z-index: 2;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
-  transform: translateX(100%);
+  display: none;
 }
 
-.sidebar.open ~ .dashboard_content{
+.sidebar.open ~ .setting-content{
   left: 250px;
   width: 100%;
 }
 
-
-#dashboard {
-  transform: translateX(0);
+.setting-content.collapse-in {
+  display: flex
 }
+/*========== End Setting ==========*/
+
+/*========== Responsive Breakpoint ==========*/
+@media screen and (max-width: 1920px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+  .welcome {
+    left: 45px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .welcome {
+    left: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .welcome {
+    left: 45px;
+  }
+  .welcome h1 {
+    font-size: 20px;
+  }
+  .users_content {
+    width: 100%;
+  }
+  .users_searchcontent h2 {
+    font-size: 15px;
+  }
+  .users_searchcontent input {
+    width: 100px;
+    height: 30px;
+  }
+  .users_searchcontent button {
+    width: 30px;
+    height: 30px;
+  }
+  .users_content th,
+  .users_content td {
+    font-size: 10px;
+  }
+}
+/*========== End Responsive Breakpoint ==========*/

@@ -235,6 +235,7 @@ nav.sticky .btn-login:hover {
 
 .content-left img {
     width: 500px;
+    height: 300px;
     padding-bottom: 10px;
 }
 /*========== End Content Left ==========*/
@@ -549,6 +550,7 @@ footer p{
     }
     .content-left img{
         width: 100%;
+        height: 150px;
     }
     .content-right img{
         width: 100%;

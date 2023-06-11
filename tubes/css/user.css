@@ -284,3 +284,13 @@
   margin: 18px
 }
 /*========== End Content ==========*/
+
+.collapse {
+  display: none;
+  margin-left: 78px;
+}
+
+.collapse-in {
+  display: block;
+  margin-left: 78px;
+}
